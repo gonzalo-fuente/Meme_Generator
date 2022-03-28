@@ -1,13 +1,154 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+*,
+*:before,
+*:after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Roboto", Impact, sans-serif;
+}
+
+header {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 1.25rem;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  color: #fff;
+}
+
+header .header-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.container {
+  max-width: 60%;
+  margin: 2.25rem auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form .inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+form input {
+  font-family: "Roboto", Impact, sans-serif;
+  height: 2.5rem;
+  width: 100%;
+  font-size: 1.1rem;
+  color: #0d0d0d;
+  border: 1px solid #d5d4d8;
+  border-radius: 5px;
+  text-indent: 1rem;
+}
+
+form .btn {
+  font-family: "Roboto", Impact, sans-serif;
+  height: 3rem;
+  width: 100%;
+  font-size: 1.25rem;
+  color: #fff;
+  background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+  border: none;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  background-size: 300% 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+form .btn:hover {
+  /* transform: scale(1.01); */
+  background-position: 100% 0;
+}
+
+.meme {
+  position: relative;
+}
+
+.meme-img {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meme-text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  overflow-wrap: break-word;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .meme-text {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  form .inputs {
+    display: block;
+  }
+
+  form input {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  form .btn {
+    margin-top: 0;
+  }
+
+  .meme-text {
+    font-size: 1.3em;
+  }
 }
